@@ -8,16 +8,38 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
-<body class="bg-warning">
-    <h1><%= name %> </h1>
-    <img src="/images/<%= imageUrl %>" alt="" width="100">
-    <p>fiyat: <%= price %> </p>
-    <p>
-        <% if (isActive) { %>
-         <span>ürün satışta</span>
-         <% } else { %>
-          <span>ürün satışta değil</span>
-        <% } %>
-    </p>
+<body>
+
+    <%- include("partials/nav")  %> 
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                
+                    <div class="card mb-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="/images/<%= urun.imageUrl %>" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= urun.name %> </h5>
+                                    <p class="card-text"><%= urun.price %> </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis repudiandae corporis, reiciendis voluptatibus eaque, cupiditate deserunt natus, excepturi officia libero nemo voluptas sunt quod tenetur necessitatibus beatae labore sapiente modi.
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aliquam dolorum, molestiae eos similique perferendis error ex eaque, qui ut quaerat iusto sapiente harum numquam inventore esse laborum et veniam!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            
+               
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
